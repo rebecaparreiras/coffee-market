@@ -1,69 +1,68 @@
-# React + TypeScript + Vite
+# Roastr | Coffee Market | Em processo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Marketplace de café 'Roastr' com catálogo de busca, filtros e ordenação, ficha do produto e carrinho lateral. Projeto de estudo para entender funcionalidades importantes para e-commerce e aprender mais sobre Tailwind. 
 
-Currently, two official plugins are available:
+<br>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Objetivos
 
-## Expanding the ESLint configuration
+O objetivo principal é explorar funcionalidades instrísecas ao e-commerce: 
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+<ul>
+  <li>
+    Catálogo com busca, filtros e ordenação:
+    <ul>
+      <li>Buscar cafés via API REST mockada (GET /coffees?q=&origin=&roast=&notes=&priceMin=&priceMax=&sort=&page=);</li>
+      <li>Filtrar por torra, origem, moagem e notas;</li>
+      <li>Ordenar por preço e avaliação;</li>
+      <li>Paginação (ou 'infinite load') com estados de loading, empty e error.</li>
+    </ul>
+  </li>
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+  <li>
+    Ficha do produto:
+    <ul>
+      <li>Mostrar nome, origem, torra, notas, rating, preço e imagens;</li>
+      <li>Botão 'Add to Cart' com feedback (toast) e controle de estoque mockado por SKU.</li>
+    </ul>
+  </li>
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+  <li>
+    Carrinho lateral:
+    <ul>
+      <li>Abrir/fechar globalmente (Context);</li>
+      <li>Listar itens, alterar quantidades, remover;</li>
+      <li>Cálculo de subtotal e cupom (utilizando POST), com estados "válido/inválido".</li>
+    </ul>
+  </li>
+  
+  <li>
+    API mock com latência e falhas.
+  </li>
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+  
+  <li>
+    UX de marketplace:
+    <ul>
+      <li>Skeletons durante o carregamento, toasts para ações, empty states informativos;</li>
+      <li>Acessibilidade: focus rings, aria-labels, navegação por teclado;</li>
+      <li>Responsivo: grid 1>2>3>4 colunas com breakpoints.</li>
+    </ul>
+  </li>
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+  <li>
+    Qualidade e manutenção:
+    <ul>
+      <li>Testes de unidade para hooks e utilitátios;</li>
+      <li>Testes de integração leve;</li>
+    </ul>
+  </li>
+</ul>
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+<br>
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Tecnologias
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" width="40" height="40"/> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" width="40" height="40"/> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" width="40" height="40"/>
+          
+          
+
