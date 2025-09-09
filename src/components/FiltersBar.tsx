@@ -1,1 +1,3 @@
-export default function FiltersBar() {}
+const FiltersBar = () => {}
+
+export default FiltersBar;

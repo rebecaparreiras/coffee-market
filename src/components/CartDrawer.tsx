@@ -1,1 +1,3 @@
-export default function CartDrawer() {}
+const CartDrawer = () => {}
+
+export default CartDrawer;

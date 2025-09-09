@@ -1,1 +1,3 @@
-export default function ProductGrid() {}
+const ProductGrid = () => {}
+
+export default ProductGrid;
